@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Portafolio Personal</title>
+</head>
+<body>
+    <header>
+        <h1>Leydy Daniela Rodriguez</h1>
+        <p>Desarrolladora Web | Diseñador | Creativo</p>
+    </header>
+
+    <nav>
+        <a href="#about">Sobre Mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <section id="about">
+        <h2>Sobre Mí</h2>
+        <p>Soy un apasionado desarrollador web con experiencia en crear sitios web innovadores y soluciones digitales. Me especializo en tecnologías modernas y siempre estoy aprendiendo.</p>
+        <h3>Habilidades</h3>
+        <div id="skills-container" class="skills-carousel"></div>
+        <div id="skills-carousel-wrapper" class="skills-carousel-wrapper">
+            <button id="prev-btn" class="carousel-btn">◀</button>
+            <div id="skills-container" class="skills-carousel"></div>
+            <button id="next-btn" class="carousel-btn">▶</button>
+        </div>
+        
+    </section>
+
+    <section id="projects">
+        <h2>Mis Proyectos</h2>
+        <div id="projects-container"></div>
+    </section>
+
+    <section id="contact">
+        <h2>Contáctame</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Correo" required>
+            <textarea id="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+    <script src="script.js"></script>

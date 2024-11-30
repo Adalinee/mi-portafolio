@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(45deg, #f598bf, #fcc7de, #f32880);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    transition: background 2s ease;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Resto de los estilos anteriores */
+header {
+    background-color: rgba(44, 62, 80, 0.7);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Navegación */
+nav {
+    background-color: rgba(52, 73, 94, 0.7);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f598bf;
+}
+
+/* Secciones */
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* Proyectos */
+.project {
+    background-color: rgba(241, 241, 241, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Formulario de contacto */
+#contact form {
+    display: grid;
+    gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+#contact button {
+    background-color: #f32880;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 4px;
+}
+
+#contact button:hover {
+    background-color: #f598bf;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Contenedor del carrusel */
+.skills-carousel {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: 20px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* Estilo para las cartas */
+.skills-carousel span {
+    display: inline-block;
+    min-width: 150px;
+    height: 100px;
+    background: linear-gradient(45deg, #f598bf, #fcc7de);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skills-carousel span:hover {
+    transform: scale(1.1); /* Efecto al pasar el ratón */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+/* Wrapper del carrusel */
+.skills-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Contenedor del carrusel */
+.skills-carousel {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    background-color: #fcc7de;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #f598bf;
+    transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
